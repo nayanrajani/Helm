@@ -1,0 +1,17 @@
+16: helm repo list                      
+17: helm repo search nginx              
+18: helm search repo nginx              
+19: helm search repo nginx --version    
+20: helm search repo nginx --versions   
+21: helm repo update                    
+22: helm install mynginx mybitnami/nginx
+23: helm list                           
+24: helm list --output=yaml             
+25: helm list --output=json             
+26: helm list -n default                
+27: kubectl get pods                    
+28: kubectl get svc                     
+29: localhost:80                        
+30: curl http://localhost:80            
+31: kubectl get svc -o wide             
+32: helm uninstall mynginx
