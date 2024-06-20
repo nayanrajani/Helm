@@ -1,6 +1,9 @@
 # Helm Install 
 
+- https://github.com/helm/helm/releases
+
 ## Step-01: Introduction
+
 - We will use the following commands as part of this demo
 - helm repo list
 - helm repo add
@@ -11,9 +14,11 @@
 - helm uninstall 
 
 ## Step-02: List, Add and Search Helm Repository
+
 - [Bitnami Applications packaged using Helm](https://bitnami.com/stacks/helm)
 - [Search for Helm Charts at Artifacthub.io](https://artifacthub.io/)
 ```t
+
 # List Helm Repositories
 helm repo list
 
@@ -32,6 +37,7 @@ helm search repo wildfly
 ```
 
 ## Step-03: Install Helm Chart
+
 - Installs the Helm Chart
 ```t
 # Update Helm Repo
@@ -43,6 +49,7 @@ helm install mynginx mybitnami/nginx
 ```
 
 ## Step-04: List Helm Releases
+
 - This command lists all of the releases for a specified namespace
 ```t
 # List Helm Releases (Default Table Output)
