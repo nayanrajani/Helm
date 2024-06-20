@@ -10,6 +10,12 @@
 
 - https://helm.sh/docs/
 
+- Bitnami is the most famous for packing solutions for open-source applications.
+  - Bitnami makes it easy to get your favorite open source software up and running on any platform, including your laptop, Kubernetes and all the major clouds. In addition to popular community offerings, Bitnami, now part of VMware, provides IT organizations with an enterprise offering that is secure, compliant, continuously maintained and customizable to your organizational policies.
+
+- https://artifacthub.io/
+  - Artifact Hub is a web-based application that enables finding, installing, and publishing Cloud Native packages and configurations for various CNCF projects. 
+
 ## Introduction
 
 - Helm is a Kubernetes deployment tool for automating creation, packaging, configuration, and deployment of applications and services to Kubernetes clusters.
