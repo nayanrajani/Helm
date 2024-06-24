@@ -1,0 +1,28 @@
+0: helm list                                                                
+1: helm repo list                                                           
+2: helm repo add stacksimplify https://stacksimplify.github.io/helm-charts/ 
+3: helm repo list                                                           
+4: helm search repo mychart1                                                
+5: helm install myapp1 stacksimplify/mychart1                               
+6: helm ls                                                                  
+7: kubectl get pods,svc                                                     
+8: helm upgrade myapp1 stacksimplify/mychart1 --set "image.tag=2.0.0"       
+9: helm ls                                                                  
+10: helm list                                                               
+11: helm list --superseded                                                  
+12: helm list --deployed                                                    
+13: kubectl get pods                                                        
+14: kubectl describe pod myapp1-mychart1-6bd969964f-gcsjl                   
+15: helm upgrade myapp1 stacksimplify/mychart1 --set "image.tag=3.0.0"      
+16: helm list                                                               
+17: kubectl get pods                                                        
+18: kubectl describe pod myapp1-mychart1-fdd5d8f56-htb7h                    
+19: helm history myapp1
+20: helm status myapp1                                                      
+21: helm status myapp1 --show-resources                                     
+22: helm status myapp1 --show-desc                                          
+23: helm status myapp1 --revision 2                                         
+24: helm uninstall myapp1                                                   
+25: helm list                                                               
+26: helm repo list                                                          
+27: helm repo remove stacksimplify

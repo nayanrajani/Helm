@@ -139,6 +139,3 @@ helm status myapp1 --revision 2
 # Uninstall Helm Release
 helm uninstall myapp1
 ```
-
-
-
