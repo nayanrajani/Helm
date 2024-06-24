@@ -1,0 +1,19 @@
+1: helm list --uninstalled                             
+2: helm status myapp101                                
+3: helm history myapp101                               
+4: kubectl get pods                                    
+5: helm rollback myapp101 3                            
+6: kubectl get pods                                    
+7: helm list                                           
+8: helm uninstall myapp101                             
+9: helm list --uninstalled                             
+10: helm status myapp101                               
+11: helm rollback myapp101 1                           
+12: git add .                                          
+13: git commit -m "05"                                 
+14: git push                                           
+15: helm install stacksimplify/mychart1 --generate-name
+16: helm list                                          
+17: helm list --output=yaml                              
+19: helm status mychart1-1719228412 --show-resources   
+20: helm uninstall mychart1-1719228412
