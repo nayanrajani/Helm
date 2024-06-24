@@ -1,0 +1,11 @@
+0: helm install dev101 stacksimplify/mychart1         
+1: helm list                                          
+2: helm status dev101 --show-resources                
+3: helm install qa101 stacksimplify/mychart1          
+4: helm list                                          
+5: helm uninstall qa101                               
+6: helm list                                          
+7: helm install qa101 stacksimplify/mychart1 --atomic 
+8: helm list                                          
+9: helm uninstall dev101                              
+10: helm list
