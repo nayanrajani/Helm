@@ -1,0 +1,22 @@
+0: helm search repo mychart2                                                 
+1: helm repo list                                                                   
+2: helm repo add stacksimplify https://stacksimplify.github.io/helm-charts/
+3: helm search repo mychart2                                                 
+4: helm search repo mychart2 --version                                       
+5: helm search repo mychart2 --versions
+11: helm search repo mychart2 --version "0.2.0"                              
+12: helm status myapp101 --show-resources                                    
+13: helm install myapp101 stacksimplify/mychart2 --version "0.1.0"           
+14: hhelm list                                                               
+15: helm list                                                                
+16: helm status myapp101 --show-resources                                    
+17: kubectl get pods                                                         
+18: kubectl logs -f myapp101-mychart2-779c8d5bc9-25qx8                       
+19: helm upgrade myapp101 stacksimplify/mychart2 --version "0.2.0"           
+20: helm upgrade myapp101 stacksimplify/mychart2                             
+21: helm status myapp101 --show-resources                                    
+22: helm history myapp101                                                    
+23: helm rollback myapp101                                                   
+24: helm history myapp101                                                    
+25: helm rollback myapp101 1                                                 
+26: helm history myapp101
