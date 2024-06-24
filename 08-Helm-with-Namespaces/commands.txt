@@ -1,0 +1,15 @@
+0: helm install dev101 stacksimplify/mychart2 --version "0.1.0" --namespace dev --create-namespace
+1: kubectl get ns                                                                                 
+2: helm list                                                                                      
+3: helm list -n dev                                                                               
+4: helm list dev101 --show-resources                                                              
+5: helm status dev101 --show-resources                                                            
+6: helm status dev101 --show-resources -n dev                                                     
+7: helm upgrade dev101 stacksimplify/mychart2 --version "0.2.0" -n dev                            
+8: helm status dev101 --show-resources -n dev                                                     
+9: helm list -n dev                                                                               
+10: helm uninstall dev101 --namespace dev                                                         
+11: helm list -n dev                                                                              
+12: kubectl get ns                                                                                
+13: kubectl delete ns dev                                                                         
+14: kubectl get ns
