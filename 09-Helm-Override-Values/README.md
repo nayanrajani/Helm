@@ -51,6 +51,9 @@ service:
 
 ### Step-02-03: helm install with --set and test
 ```t
+# Helm Uninstall
+helm uninstall myapp901
+
 # Helm Install 
 helm install myapp901 stacksimplify/mychart1 --set service.nodePort=31240 
 

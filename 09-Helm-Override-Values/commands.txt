@@ -1,0 +1,34 @@
+4: helm install myapp901 stacksimplify/mychart1                                                
+5: helm install myapp901 stacksimplify/mychart1 --set service.nodeport=31240 --dry-run         
+6: helm install myapp901 stacksimplify/mychart1 --set service.nodePort=31240 --dry-run         
+7: helm install myapp901 stacksimplify/mychart1 --set service.nodePort=31240 --dry-run --debug 
+8: helm install myapp901 stacksimplify/mychart1 --set service.nodePort=31240                   
+9: helm uninstall myapp901 stacksimplify/mychart1                                              
+10: helm list                                                                                  
+11: helm install myapp901 stacksimplify/mychart1 --set service.nodePort=31240                  
+12: helm status myapp901 --show-resources                                                      
+13: cd 09-Helm-Override-Values                                                                 
+14: helm upgrade myapp901 stacksimplify/mychart1 -f myvalues.yaml --dry-run --debug            
+15: helm upgrade myapp901 stacksimplify/mychart1 -f myvalues.yaml                              
+16: kubectl get pods                                                                           
+17: helm status myapp901 --show-resources                                                      
+18: helm get values myapp901                                                                   
+19: helm history myapp901                                                                      
+20: helm get values myapp901 --revision 1                                                      
+21: helm get manifest myapp901                                                                 
+22: helm get manifest myapp901 --revision 1                                                    
+23: helm get all myapp901
+24: helm list                                                                                  
+25: helm uninstall myapp901                                                                    
+26: helm get all                                                                               
+27: helm install myapp901 stacksimplify/mychart1 --atomic                                      
+28: helm list                                                                                  
+29: helm status myapp901 --show-resources                                                      
+30: helm install myapp902 stacksimplify/mychart1 --atomic                                      
+31: helm install myapp902 stacksimplify/mychart1 --set service.nodePort=null --dry-run --debug 
+32: helm install myapp902 stacksimplify/mychart1 --set service.nodePort=null                   
+33: helm status myapp902 --show-resources                                                      
+34: helm status myapp901 --show-resources                                                      
+35: helm uninstall myapp901                                                                    
+36: helm uninstall myapp902                                                                    
+37: helm list
