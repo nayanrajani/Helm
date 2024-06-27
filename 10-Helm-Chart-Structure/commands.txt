@@ -1,0 +1,8 @@
+0: helm create myfirstchart      
+1: tree /f                       
+3: more /myfirstchart/.helmignore
+4: cd myfirstchart                             
+6: tree /f                       
+7: more Chart.yaml               
+8: cd templates                  
+9: more _helpers.tpl
