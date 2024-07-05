@@ -1,16 +1,19 @@
 # Helm Builtin Objects
 
 ## Step-01: Introduction
+
 - Objects are passed into a template from the template engine. 
 - Objects can be simple, and have just one value or they can contain other objects or functions. 
 - For example: the Release object contains several objects (like .Release.Name) and the Files object has a few functions.
+
 ### Helm Builtin Objects
-- Release 
-- Chart 
-- Values 
-- Capabilities 
-- Template 
-- Files 
+
+- Release
+- Chart
+- Values
+- Capabilities
+- Template
+- Files
 
 ## Step-02: Create a simple chart and clean-up NOTES.txt
 ```t
@@ -183,5 +186,3 @@ File Glob: map[config-files/myconfig2.toml:[97 112 112 78 97 109 101 58 32 109 1
 ## Additional Reference
 - [Helm Built-In Objects](https://helm.sh/docs/chart_template_guide/builtin_objects/)
 - [Helm Chart.yaml Fields](https://helm.sh/docs/chart_template_guide/builtin_objects/)
-
-
