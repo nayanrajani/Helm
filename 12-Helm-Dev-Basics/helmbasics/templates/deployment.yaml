@@ -1,40 +1,44 @@
+# Nayan Deployment file
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: {{ .Release.Name }}-{{ .Chart.Name }}
   labels:
-    app: nginx
-  annotations:
-    app.kubernetes.io/managed-by: {{ .Release.Service }}
-    # Quote Function
-    app.kubernetes.io/managed-by: {{ quote .Release.Service }}        
+    app: {{ .Values.appName }}
+  annotations:    
+    app.kubernetes.io/Realease-Name: {{ .Release.Name }} 
+
+    # Add Quote function
+    app.kubernetes.io/Chart-Name: {{ quote .Chart.Name }}
+    # Quote function
+    app.kubernetes.io/Chart-Name: {{ .Chart.Name | quote }}
     # Pipeline
-    app.kubernetes.io/managed-by: {{ .Release.Service | quote | upper | lower }}        
-    # default Function
-    app.kubernetes.io/name: {{ default "MYRELEASE101" .Values.releaseName | lower }}
+    app.kubernetes.io/Chart-Name: {{ .Chart.Name | upper }}
+    app.kubernetes.io/Chart-Name: {{ .Chart.Name | lower }}
+    # Default Function
+    app.kubernetes.io/Release-Name: {{ default "MyDefault" .Values.releaseName | lower }}
     # Controlling Leading and Trailing White spaces 
-    leading-whitespace: "   {{- .Chart.Name }}    kalyan"
-    trailing-whitespace: "   {{ .Chart.Name -}}    kalyan"
-    leadtrail-whitespace: "   {{- .Chart.Name -}}    kalyan"   
+    leading-whitespace: "   {{- .Chart.Name }}    Nayan"
+    trailing-whitespace: "   {{ .Chart.Name -}}    Nayan"
+    leadtrail-whitespace: "   {{- .Chart.Name -}}    Nayan" 
     # indent function
-    indenttest: "  {{- .Chart.Name | indent 4 -}}  "  
+    indenttest: "  {{- .Chart.Name | indent 4 -}}  "
     # nindent function
-    nindenttest: "  {{- .Chart.Name | nindent 4 -}}  "        
+    nindenttest: "  {{- indent 2 .Chart.Name | nindent 4 -}}  "  
 spec:
-  replicas: {{ default 2 .Values.replicaCount }}
+  replicas: {{ default 1 .Values.replicaCount }}
   selector:
     matchLabels:
-      app: nginx
+      app: {{ .Values.appName }}
   template:
     metadata:
       labels:
-        app: nginx
+        app: {{ .Values.appName }}
     spec:
       containers:
-      - name: nginx
-        image: ghcr.io/stacksimplify/kubenginx:4.0.0
-        ports:
-        - containerPort: 80
-        resources:
-{{- toYaml .Values.resources | nindent 10 }}
-        
+        - name: {{ .Values.appName }}
+          image: {{ .Values.imageName }}
+          ports:
+            - containerPort: 80
+          resources:
+{{- toYaml .Values.resources | nindent 12 -}}

@@ -1,8 +1,10 @@
-releaseName: "kalyan"
-replicaCount: 0
+releaseName: "Nayan-app"
+replicaCount: 2
+appName: nayan-nginx
+imageName: ghcr.io/stacksimplify/kubenginx:4.0.0
 
 # Resources for testing Template Function: toYaml 
-resources: 
+resources:
   limits:
     cpu: 100m
     memory: 128Mi
