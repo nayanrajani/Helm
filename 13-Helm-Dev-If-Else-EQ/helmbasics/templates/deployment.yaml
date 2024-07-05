@@ -6,12 +6,12 @@ metadata:
     app: nginx
 spec:
 {{- if eq .Values.myapp.env "prod" }}
-  replicas: 4
-{{- else if eq .Values.myapp.env "qa" }}  
+  replicas: 5
+{{- else if eq .Values.myapp.env "qa" }}
+  replicas: 3
+{{- else }}
   replicas: 2
-{{- else }}  
-  replicas: 1
-{{- end }}  
+{{- end }}
   selector:
     matchLabels:
       app: nginx
